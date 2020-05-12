@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dash</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render "shared/favicon" %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="flash_container">
+      <% if flash[:notice] %>
+        <div class="flash-message flash-success">
+          <p>
+            <i class="fa fa-check-circle"></i><%= flash[:notice] %>
+          </p>
+        </div>
+        <% elsif flash[:error] %>
+          <div class="flash-message flash-error"><p>
+            <i class="fa fa-exclamation-circle"></i><%= flash[:error] %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
+  </body>
+</html>

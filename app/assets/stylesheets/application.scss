@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "ombulabs/styleguide";
+
+header {
+  background-color: $black;
+  ul{
+    text-align: right;
+    li{
+      display: inline;
+    }
+  }
+}
+
+.container{
+  padding: 100px;
+  text-align: left;
+  h1, h3, h5, h4{
+    text-align: left;
+  }
+}
+
+ol{
+  margin-top: 20px;
+  li{
+    list-style: disc;
+    padding-bottom: 5px;
+    margin-left: 20px;
+  }
+}
+
+form{
+  label{
+    color: $black;
+  }
+  input{
+    border: 1px solid;
+    float: left;
+    width: calc(100% - 220px);
+    margin-right: 10px;
+    &.button{
+      width: 210px;
+      border: none;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.table{
+  margin: 50px 0;
+  width: 100%;
+  .table__row:nth-child(even) { background: $light_grey;}
+  .table__row{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 120px 1fr 96px 140px;
+    align-items: center;
+    border-bottom: 1px solid $medium_grey;
+    &.table__row--head{
+      padding: 10px;
+      text-align: left;
+      background: $light_grey;
+      th {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      th:nth-last-child(-n+2){
+        text-align: center;
+      }
+    }
+    td:nth-last-child(-n+2){
+      text-align: center;
+    }
+  }
+}
+
+.project_name {
+  font-size: 12px;
+}
+
+.flash_container{
+  padding: 100px 100px 0 100px;
+  margin-bottom: -70px;
+}
+
+#todo_title {
+  color: white;
+  float: left;
+  font-size: 28px
+}
