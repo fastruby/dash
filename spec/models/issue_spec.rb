@@ -4,9 +4,7 @@ RSpec.describe Issue do
 
   describe '.sync_with_github' do
 
-
       it "deletes issues that are no longer open", :vcr  do
-
         issue = FactoryBot.create(:issue)
 
         Issue.sync_with_github
