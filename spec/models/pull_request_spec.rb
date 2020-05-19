@@ -20,5 +20,13 @@ RSpec.describe PullRequest do
       expect(pr.state).to eq("open")
       expect(pr.assignees).to include(user_bot)
     end
+
+    it "deletes all open pull requests that aren't found", :vcr do
+      pull_request = FactoryBot.create(:pull_request)
+
+      PullRequest.sync_with_github
+
+      expect(PullRequest.all).to be_empty
+    end
   end
 end
