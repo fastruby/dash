@@ -15,6 +15,10 @@ class OctokitService
     end
   end
 
+  def get_issue(issue)
+   client.issue(issue.repository_name, issue.issue_number)
+  end
+
   def get_pull_requests(repositories)
     repositories.flatten.flat_map do |r|
       client.pull_requests(r.full_name, :state => 'open')
