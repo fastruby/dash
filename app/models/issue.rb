@@ -23,7 +23,7 @@ class Issue < ApplicationRecord
     issues.each do |issue|
       begin
         updated_issue = octokit_service.get_issue(issue)
-        puts updated_issue.inspect
+
         issue.updates_issue(updated_issue)
       rescue Octokit::NotFound
         self.remove_closed_issue(issue)
