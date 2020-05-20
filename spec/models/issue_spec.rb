@@ -12,13 +12,17 @@ RSpec.describe Issue do
       end
 
       it "updates issues that are open", :vcr do
-        user_bot = FactoryBot.create(:user,
-                                    name: "ombu-bot",
-                                    id: 1)
+        user_bot = FactoryBot.create(
+          :user,
+          name: "ombu-bot",
+          id: 1
+          )
 
-        open_issue = FactoryBot.create(:issue,
-                                      repository_name: "TestDash/fake-repo",
-                                      issue_number: "1")
+        open_issue = FactoryBot.create(
+          :issue,
+          repository_name: "TestDash/fake-repo",
+          issue_number: "1"
+          )
 
         Issue.sync_with_github
         expect(open_issue.assignees.count).to eq 1
