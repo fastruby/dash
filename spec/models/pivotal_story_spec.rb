@@ -13,11 +13,11 @@ RSpec.describe PivotalStory do
         story_link: "www.link.com",
         project_link: "www.link/project_id",
         story_number: 5
-        )
+      )
       user = FactoryBot.create(
         :user,
         pivotal_id: 4578
-        )
+      )
       pivotal_story =
         TrackerApi::Resources::Story.new(
           url: "www.linktest.com",
@@ -26,7 +26,7 @@ RSpec.describe PivotalStory do
           project_id: 78593,
           id: 5,
           owner_ids: [4578]
-          )
+        )
       PivotalStory.create_update_pivotal_story(pivotal_story, "The Project")
 
       story.reload

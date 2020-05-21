@@ -10,7 +10,7 @@ RSpec.describe PivotalWorker, type: :worker do
         id: 3,
         pivotal_token: ENV["PIVOTAL_TOKEN"],
         pivotal_id: nil
-        )
+      )
 
       expect{
         PivotalWorker.new.perform(user_bot.id)

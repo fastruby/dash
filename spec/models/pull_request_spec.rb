@@ -12,11 +12,11 @@ RSpec.describe PullRequest do
         pull_request_number: "2",
         title: "Pull Request Test",
         repository_name: "testdash/fake-repo"
-        )
+      )
       user_bot = FactoryBot.create(
         :user,
         name: "ombu-bot"
-        )
+      )
 
       PullRequest.sync_with_github
 
