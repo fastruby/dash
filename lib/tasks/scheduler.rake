@@ -4,3 +4,10 @@ task :update_pull_requests => :environment do
   PullRequest.sync_with_github
   puts "done."
 end
+
+desc "This task uses the github API to update issues"
+task :update_issues => :environment do
+  puts "Updating issues..."
+  Issue.sync_with_github
+  puts "done."
+end

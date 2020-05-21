@@ -6,14 +6,18 @@ RSpec.describe PivotalStory do
   describe '.create_update_pivotal_story' do
 
     it "updates the state of the stories" do
-      story = FactoryBot.create(:pivotal_story,
-                                state: "unstarted",
-                                name: "MyTest",
-                                story_link: "www.link.com",
-                                project_link: "www.link/project_id",
-                                story_number: 5)
-      user = FactoryBot.create(:user,
-                              pivotal_id: 4578)
+      story = FactoryBot.create(
+        :pivotal_story,
+        state: "unstarted",
+        name: "MyTest",
+        story_link: "www.link.com",
+        project_link: "www.link/project_id",
+        story_number: 5
+      )
+      user = FactoryBot.create(
+        :user,
+        pivotal_id: 4578
+      )
       pivotal_story =
         TrackerApi::Resources::Story.new(
           url: "www.linktest.com",

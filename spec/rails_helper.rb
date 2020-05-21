@@ -21,6 +21,7 @@ VCR.configure do |config|
 
   config.filter_sensitive_data('$ACCESS_TOKEN') { ENV['GITHUB_PERSONAL_ACCESS_TOKEN'] }
   config.filter_sensitive_data('$ACCESS_TOKEN') { ENV['PIVOTAL_TOKEN'] }
+  config.filter_sensitive_data('$ACCESS_TOKEN') { ENV['GITHUB_MACHINE_USER_ACCESS_TOKEN'] }
 end
 
 RSpec::Sidekiq.configure do |config|

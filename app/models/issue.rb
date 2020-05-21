@@ -16,6 +16,21 @@ class Issue < ApplicationRecord
     end
   end
 
+  def self.sync_with_github
+    issues = self.where(state: :open)
+    octokit_service = OctokitService.new(ENV["GITHUB_MACHINE_USER_ACCESS_TOKEN"])
+
+    issues.each do |issue|
+      begin
+        updated_issue = octokit_service.get_issue(issue)
+
+        issue.updates_issue(updated_issue)
+      rescue Octokit::NotFound
+        self.remove_closed_issue(issue)
+      end
+    end
+  end
+
   def issue_assignees(_assignees)
     self.assignees = []
 
@@ -25,9 +40,19 @@ class Issue < ApplicationRecord
     end
   end
 
+  def updates_issue(updated_issue)
+    update(state: updated_issue["state"])
+
+    issue_assignees(updated_issue["assignees"])
+  end
+
   def self.remove_closed_issues(_issues)
     github_issues_links = _issues.map {|x| x.html_url }
     Issue.where.not(issue_link: github_issues_links).delete_all
+  end
+
+  def self.remove_closed_issue(_issue)
+    Issue.find(_issue.id).delete
   end
 
   def repo_url(pr)

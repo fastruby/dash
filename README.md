@@ -61,9 +61,12 @@ Effort has been taken to ensure that private information is excluded from the re
 
 ## Tasks
 
-  There is a rake task in lib/tasks/scheduler.rake available to use as a cron job.
+  There are rake tasks in lib/tasks/scheduler.rake available to use as a cron job.
 ```
   $ bundle exec rake update_pull_requests
+```
+```
+  $ bundle exec rake update_issues
 ```
   ## Contributing
 
