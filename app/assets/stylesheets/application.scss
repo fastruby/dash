@@ -99,7 +99,9 @@ form{
 }
 
 #todo_title {
-  color: white;
+  color: $white;
+  font-weight: 400;
   float: left;
-  font-size: 28px
+  font-size: 28px;
+  font-family: $font-open-sans;
 }
