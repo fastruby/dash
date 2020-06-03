@@ -4,11 +4,12 @@
 #
 version: 2
 jobs:
-  branches:
-    ignore:
-      - gh-pages
-      - /gh-pages-.*/
-      - fixes/remove-rails-app
+  build:
+    branches:
+      ignore:
+        - gh-pages
+        - /gh-pages-.*/
+        - fixes/remove-rails-app
   build:
     docker:
       # specify the version you desire here
