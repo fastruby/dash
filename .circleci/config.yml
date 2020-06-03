@@ -4,13 +4,13 @@
 #
 version: 2
 jobs:
+  branches:
+    ignore:
+      - gh-pages
+      - /gh-pages-.*/
+      - fixes/remove-rails-app
   build:
     docker:
-      branches:
-        ignore:
-          - gh-pages
-          - /gh-pages-.*/
-          - fixes/remove-rails-app
       # specify the version you desire here
        - image: circleci/ruby:2.6.6-node-browsers
          environment:
