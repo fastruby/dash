@@ -1,0 +1,12 @@
+@import '../static/styleguide.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.styleguide-page #page-wrapper, h1, h2, h3, h4, h5{
+  text-align: left;
+}
+ p, h4{
+   margin-bottom: 20px;
+ }
