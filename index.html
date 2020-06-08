@@ -16,22 +16,24 @@
     <a href="#top">
       <h1>OmbuLabs</h1>
     </a>
-    <li><a href="#getting-started" title="Logo">Getting Started</a></li>
-    <li><a href="#variables" title="Color">Environment Variables</a></li>
-    <li><a href="#server" title="Typography">Starting the Server</a></li>
-    <li><a href="#tests" title="Links & Buttons">Running Tests</a></li>
-    <li><a href="#tasks" title="Forms">Tasks</a></li>
-    <li><a href="#contributing" title="Flash">Contributing</a></li>
-    <li><a href="#license" title="Icons">License</a></li>
-    <li><a href="#code-of-conduct" title="Icons">Code of Conduct</a></li>
+    <li><a href="#getting-started" title="Getting Started">Getting Started</a></li>
+    <li><a href="#variables" title="Variables">Environment Variables</a></li>
+    <li><a href="#server" title="Starting the Server">Starting the Server</a></li>
+    <li><a href="#tests" title="Running Tests">Running Tests</a></li>
+    <li><a href="#tasks" title="Tasks">Tasks</a></li>
+    <li><a href="#heroku" title="Heroku">Heroku</a></li>
+    <li><a href="#contributing" title="Contributing">Contributing</a></li>
+    <li><a href="#license" title="License">License</a></li>
+    <li><a href="#code-of-conduct" title="Code of Conduct">Code of Conduct</a></li>
   </ul>
 
   <section id="page-wrapper">
     <div id="sections">
 
       <h2>Dash</h2>
-      <h3>At <a href="https://github.com/fastruby/dash" title="Dash" target="_blank">Dash</a>, A dashboard to integrate
-        GitHub pull requests and issues, as well as Pivotal Tracker stories. </h3>
+      <h3><a href="https://github.com/fastruby/dash" title="Dash" target="_blank">Dash</a> is an open source dashboard application integrating
+        <a href="https://github.com/" title="Github" target="_blank">Github</a> pull requests and issues with <a href="https://www.pivotaltracker.com/" title="Pivotal Tracker" target="_blank">Pivotal Tracker</a> stories.This project is maintained by <a href="https://www.ombulabs.com/" title="OmbuLabs" target="_blank">OmbuLabs</a> </h3>
+      <img id="example" src='static/images/dash-example.png' alt='Dash Example Page'>
 
       <div id="getting-started" class="section__content">
         <h2>Getting Started</h2>
@@ -100,6 +102,36 @@ GITHUB_ORGANIZATIONS=myorg,otherorg,org-org</code></pre>
         <div>
           <pre><code> $ bundle exec rake update_pull_requests </code></pre>
           <pre><code> $ bundle exec rake update_issues </code></pre>
+        </div>
+      </div>
+
+      <div id="heroku" class="section__content">
+        <h2>Deploy with Heroku</h2>
+        <div>
+          <p>Follow the steps to creating a new app on <a href="https://devcenter.heroku.com/start" title="heroku" target="_blank">Heroku</a>.</p>
+          <h5>Add these enviornement variables to Heroku:</h5>
+          <p>See above in <a href="#variables" title="variables">Environment Variables</a> section if you are unsure of where to get these variables.</p>
+          <ul>
+            <li>GITHUB_KEY</li>
+            <li>GITHUB_SECRET</li>
+            <li>GITHUB_MACHINE_USER_ACCESS_TOKEN</li>
+            <li>LOCKBOX_MASTER_KEY</li>
+            <li>GITHUB_ORGANIZATIONS</li>
+          </ul>
+          <h5>Required Heroku Add-Ons:</h5>
+          <ul>
+            <li>heroku-postgresql</li>
+            <li>heroku-redis</li>
+          </ul>
+          <h5>Optional Heroku Add-On</h5>
+          <ul>
+            <li>heroku-scheduler</li>
+          </ul>
+          <h5>Dynos (Hobby Dynos)</h5>
+          <ul>
+            <li>web bundle exec puma -C config/puma.rb</li>
+            <li>worker bundle exec sidekiq -t 2</li>
+          </ul>
         </div>
       </div>
 

@@ -10,3 +10,14 @@ html {
  p, h4{
    margin-bottom: 20px;
  }
+
+ h5{
+   padding-top: 5px;
+   padding-bottom: 5px;
+ }
+
+ #example{
+   max-width: 100%;
+   height: auto;
+   border: 1px solid black;
+ }
