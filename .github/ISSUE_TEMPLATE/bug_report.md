@@ -16,9 +16,9 @@ assignees: ''
 - [ ] I'm reporting the issue to the correct repository (for multi-repository projects)
 
 
-**Version:**
+**Branch/Commit:**
 
-Inform what version of Dash you are using.
+Inform what branch/commit of Dash you are using.
 
 **Expected behavior:**
 
