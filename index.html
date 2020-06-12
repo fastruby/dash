@@ -1,140 +1,165 @@
 <html>
-  <head>
-    <title>Dash</title>
-    <link rel="stylesheet" type="text/css" href="static/styleguide.css">
-    <script src="static/styleguide.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body class="styleguide-page">
-    <div id='top'></div>
-    <a href="#" id="nav-button" class="">
-      <span>Menu</span>
+
+<head>
+  <title>Dash</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="styleguide-page">
+  <div id='top'></div>
+  <a href="#" id="nav-button" class="">
+    <span>Menu</span>
+  </a>
+
+  <ul id="main-nav">
+    <a href="#top">
+      <h1>OmbuLabs</h1>
     </a>
+    <li><a href="#getting-started" title="Getting Started">Getting Started</a></li>
+    <li><a href="#variables" title="Variables">Environment Variables</a></li>
+    <li><a href="#server" title="Starting the Server">Starting the Server</a></li>
+    <li><a href="#tests" title="Running Tests">Running Tests</a></li>
+    <li><a href="#tasks" title="Tasks">Tasks</a></li>
+    <li><a href="#heroku" title="Heroku">Heroku</a></li>
+    <li><a href="#contributing" title="Contributing">Contributing</a></li>
+    <li><a href="#license" title="License">License</a></li>
+    <li><a href="#code-of-conduct" title="Code of Conduct">Code of Conduct</a></li>
+  </ul>
 
-    <ul id="main-nav">
-      <a href="#top"><h1>OmbuLabs</h1></a>
-      <li><a href="#logo" title="Logo">Getting Started</a></li>
-      <li><a href="#color" title="Color">Environment Variables</a></li>
-      <li><a href="#typography" title="Typography">Starting the Server</a></li>
-      <li><a href="#links-buttons" title="Links & Buttons">Running Tests</a></li>
-      <li><a href="#forms" title="Forms">Tasks</a></li>
-      <li><a href="#flash" title="Flash">Contributing</a></li>
-      <li><a href="#icons" title="Icons">License</a></li>
-      <li><a href="#icons" title="Icons">Code of Conduct</a></li>
-    </ul>
+  <section id="page-wrapper">
+    <div id="sections">
 
-    <section id="page-wrapper">
-      <div id="sections">
+      <h2>Dash</h2>
+      <h3><a href="https://github.com/fastruby/dash" title="Dash" target="_blank">Dash</a> is an open source dashboard application integrating
+        <a href="https://github.com/" title="Github" target="_blank">Github</a> pull requests and issues with <a href="https://www.pivotaltracker.com/" title="Pivotal Tracker" target="_blank">Pivotal Tracker</a> stories.This project is maintained by <a href="https://www.ombulabs.com/" title="OmbuLabs" target="_blank">OmbuLabs</a> </h3>
+      <img id="example" src='static/images/dash-example.png' alt='Dash Example Page'>
 
-        <h2>Dash</h2>
-        <p>At <a href="https://github.com/fastruby/dash" title="Dash" target="_blank">Dash</a>, A dashboard to integrate GitHub pull requests and issues, as well as Pivotal Tracker stories. </p>
+      <div id="getting-started" class="section__content">
+        <h2>Getting Started</h2>
+        <h4>To get started with the app:</h4>
+        <pre><code>$ bin/setup</code></pre>
+      </div>
 
-        <div id="logo" class="section__content">
-          <h3>Getting Started</h3>
-          <p>To get started with the app:</p>
-        </div>
+      <div id="variables" class="section__content">
+        <h2>Environment Variables</h2>
+        <h4>Running bin/setup will create a .env file with the following environment variables:</h4>
+        <p>Examples</p>
 
-        <div id="color" class="section__content">
-          <h2>Color</h2>
-          <h3>Primary colors</h3>
-          <ul id="color-samples">
-            <li class="black"><p>Black<span>#000000</span></p></li>
-            <li class="magenta"><p>Magenta<span>#f70a7c</span></p></li>
-            <li class="green"><p>Green<span>#D9F1F1</span></p></li>
-            <li class="orange"><p>Orange<span>#ffcc00</span></p></li>
-            <li class="light-green"><p>Light Green<span>#D9F1F1</span></p></li>
-          </ul>
-          <h3>Secondary colors</h3>
-          <ul id="color-samples">
-            <li class="dark-grey"><p>Dark Grey<span>#272727</span></p></li>
-            <li class="light-grey"><p>Light Grey<span>#eff7f7</span></p></li>
-          </ul>
-        </div>
+        <pre><code>GITHUB_KEY=c0aa36d5697d97ded
+GITHUB_SECRET=6571a2b4fc1dae2abcdea568edc9161a1e7672
+GITHUB_PERSONAL_ACCESS_TOKEN=058ba38d0e50000333265ae783534a560838868f6
+GITHUB_MACHINE_USER_ACCESS_TOKEN=28abc9e6de7e1234567d7b9c9483f23a77bd9758
+PIVOTAL_TOKEN=8406d6312871234565e9aa95516c4b2
+LOCKBOX_MASTER_KEY=0a982923e5954b16c82abcdef2c13f6368724679f056977bb36c594ead211
+GITHUB_ORGANIZATIONS=myorg,otherorg,org-org</code></pre>
 
-        <div id="typography" class="section__content">
-          <h2>Typography</h2>
+        <p>GITHUB_KEY and GITHUB_SECRET: You need to sign up for an OAuth2 Application ID and Secret on the <a
+            href="https://github.com/settings/applications" title="Github Applications" target="_blank">GitHub
+            Applications Page.</a></p>
+        <p>GITHUB_MACHINE_USER_ACCESS_TOKEN: This is required only if you want to use an asynchronous job. You can get
+          this token using a <a href="https://developer.github.com/v3/guides/managing-deploy-keys/#machine-users"
+            title="Github Machine User" target="_blank">GitHub Machine User.</a></p>
+        <p>GITHUB_PERSONAL_ACCESS_TOKEN and PIVOTAL_TOKEN: These tokens are only needed for running tests. If you want
+          to create new tests or new VCRs you will need to replace these tokens with your own.</a></p>
+        <p>LOCKBOX_MASTER_KEY: This is used by <a href="https://github.com/ankane/lockbox#key-generation"
+            title="Lockbox Gem" target="_blank">Lockbox Gem</a> which is being used to encrypt the pivotal token for
+          each user.</p>
+        <p>GITHUB_ORGANIZATIONS: This is a string with comma separated organization names. This is not the name of the
+          organization, but how it is represented in the url. For example: "Hello World" should be "hello-world"</p>
+      </div>
 
-          <div>
-            <h4>Font Family</h4>
-            <ul class="font-family">
-              <li class="light">Open Sans Light <span> Weight: 300</span></li>
-              <li class="normal">Open Sans Regular <span> Weight: 400</span></li>
-              <li class="bold">Open Sans Bold <span> Weight: 700</span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>Headings</h4>
-            <h2>This is a large heading</h2>
-            <span>Weight 300, 60pt</span>
-
-            <h3>This is a medium heading</h3>
-            <span>Weight 300, 41pt</span>
-
-            <h4>This is a small heading</h4>
-            <span>Weight 700, 23pt</span>
-
-            <h5>This is a small heading</h5>
-            <span>Weight 700, 14pt</span>
-          </div>
-
-          <div>
-            <h4>Paragraph</h4>
-            <p>OmbuLabs helps small businesses and entrepreneurs easily setup and run their online shops. We spend our days helping businesses sell more and improving eCommerce in Latin America.</p>
-            <span>Weight 400, 17pt</span>
-          </div>
-
-        </div>
-
-        <div id="links-buttons" class="section__content">
-          <h2>Links & Buttons</h2>
-          <div>
-            <a href="#">Link</a>
-            <a href="#" class="button">Button</a>
-          </div>
-        </div>
-
-        <div id="forms" class="section__content new_contact">
-          <h2>Forms</h2>
-          <div class="form-container">
-            <label for="name">Your Name</label>
-            <input placeholder="Your name" name="name" type="text">
-          </div>
-          <div class="form-container">
-            <label>Message</label>
-            <textarea placeholder="Your message" rows="4" cols="50"></textarea>
-          </div>
-
-        </div>
-
-        <div id="flash" class="section__content">
-          <h2>Flash Messages</h2>
-          <div class="flash-message flash-error"><p><i class="fa fa-exclamation-circle"></i>Error Message</p></div>
-          <div class="flash-message flash-warning"><p><i class="fa fa-exclamation-triangle"></i>Warning Message</p></div>
-          <div class="flash-message flash-success"><p><i class="fa fa-check-circle"></i>Success Message</p></div>
-          <div class="flash-message flash-info"><p><i class="fa fa-info-circle"></i>Information Message</p></div>
-
-        </div>
-
-        <div id="icons" class="section__content">
-          <h2>Icons</h2>
-          <ul>
-            <li><i class="fas fa-star"></i><span>.fa-star</span></li>
-            <li><i class="fas fa-clock"></i><span>.fa-clock-o</span></li>
-            <li><i class="fas fa-flask"></i><span>.fa-flask</span></li>
-            <li><i class="fas fa-comments"></i><span>.fa-comments-o</span></li>
-            <li><i class="fas fa-users"></i><span>.fa-users</span></li>
-            <li><i class="fas fa-pencil-alt"></i><span>.fa-pencil</span></li>
-            <li><i class="fab fa-twitter"></i><span>.fa-twitter</span></li>
-            <li><i class="fab fa-github"></i><span>.fa-github</span></li>
-            <li><i class="fab fa-linkedin"></i><span>.fa-linkedin</span></li>
-            <li><i class="fab fa-dribbble"></i><span>.fa-dribbble</span></li>
-            <li><i class="fas fa-slideshare"></i><span>.fa-slideshare</span></li>
-          </ul>
-        </div>
+      <div id="server" class="section__content">
+        <h2>Starting the Server</h2>
+        <pre><code> $ rails s </code></pre>
+        <p>Go to <a href="http://localhost:3000" title="localhost" target="_blank">http://localhost:3000</a></p>
 
       </div>
 
-    </section>
-  </body>
+      <div id="tests" class="section__content">
+        <h2>Running Tests</h2>
+        <div>
+          <pre><code>$ rails spec</code></pre>
+          <p>The tests in this project use the <a href="https://github.com/vcr/vcr" title="VRC gem" target="_blank">VCR
+              gem</a> to record and playback all interactions with the Github and Pivotal Tracker APIs. This allows you
+            to run the test suite without having an account at GitHub or Pivotal Tracker for testing.</p>
+          <p>If you add a test that requires making an additional API call, then you'll need to make adjustments to the
+            <code>.env</code> file to provide account details that are required by the test suite.</p>
+          <p>If you need to refresh the VCR cassettes, the easiest way is to delete all of the files located under <a
+              href=https://github.com/fastruby/dash/tree/master/fixtures/vcr_cassettes title="VRC fixtures"
+              target="_blank">fixtures/vcr_cassettes</a>. The next time the test suite is run, VCR will make actual
+            calls against the GitHub or Pivotal Tracker APIs and record the responses into updated cassette files. Care
+            should be taken to use fake account if you are doing this and wish to preserve sensitive data.</p>
+          <p>Effort has been taken to ensure that private information is excluded from the recorded cassettes. To adjust
+            this further, add additional <code>filter_sensitive_data</code> calls to <a
+              href=https://github.com/fastruby/dash/blob/master/spec/spec_helper.rb title="spec/spec_helper.rb"
+              target="_blank">spec/spec_helper.rb</a>.</p>
+        </div>
+      </div>
+
+      <div id="tasks" class="section__content">
+        <h2>Tasks</h2>
+        <div>
+          <pre><code> $ bundle exec rake update_pull_requests </code></pre>
+          <pre><code> $ bundle exec rake update_issues </code></pre>
+        </div>
+      </div>
+
+      <div id="heroku" class="section__content">
+        <h2>Deploy with Heroku</h2>
+        <div>
+          <p>Follow the steps to creating a new app on <a href="https://devcenter.heroku.com/start" title="heroku" target="_blank">Heroku</a>.</p>
+          <h5>Add these enviornement variables to Heroku:</h5>
+          <p>See above in <a href="#variables" title="variables">Environment Variables</a> section if you are unsure of where to get these variables.</p>
+          <ul>
+            <li>GITHUB_KEY</li>
+            <li>GITHUB_SECRET</li>
+            <li>GITHUB_MACHINE_USER_ACCESS_TOKEN</li>
+            <li>LOCKBOX_MASTER_KEY</li>
+            <li>GITHUB_ORGANIZATIONS</li>
+          </ul>
+          <h5>Required Heroku Add-Ons:</h5>
+          <ul>
+            <li>heroku-postgresql</li>
+            <li>heroku-redis</li>
+          </ul>
+          <h5>Optional Heroku Add-On</h5>
+          <ul>
+            <li>heroku-scheduler</li>
+          </ul>
+          <h5>Dynos (Hobby Dynos)</h5>
+          <ul>
+            <li>web bundle exec puma -C config/puma.rb</li>
+            <li>worker bundle exec sidekiq -t 2</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="contributing" class="section__content">
+        <h2>Contributing</h2>
+        <p>Bug reports and pull requests are welcome on GitHub at <a href=https://github.com/fastruby/dash
+            title="https://github.com/ombulabs/dash" target="_blank">https://github.com/ombulabs/dash</a>. This
+          project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere
+          to the <a href=https://github.com/ombulabs/dash/CODE_OF_CONDUCT.md title="Contributor Covenant "
+            target="_blank">Contributor Covenant </a> code of conduct.</p>
+      </div>
+
+      <div id="license" class="section__content">
+        <h2>License</h2>
+        <p>The gem is available as open source under the terms of the <a href=https://opensource.org/licenses/MIT
+            title="MIT License" target="_blank">MIT License</a>.</p>
+      </div>
+
+      <div id="code-of-conduct" class="section__content">
+        <h2>Code of Conduct</h2>
+        <p>Everyone interacting in the Dash project's codebases, issue trackers, chat rooms and mailing lists is
+          expected to follow the <a href=https://github.com/ombulabs/dash/CODE_OF_CONDUCT.md title="code of conduct"
+            target="_blank">code of conduct</a>.</p>
+      </div>
+
+    </div>
+  </section>
+  <script src="static/styleguide.js"></script>
+</body>
+
 </html>
