@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         left: 100,
         behavior: 'smooth'
       });
-      
     })
   });
 
@@ -42,11 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('#sections > div').forEach(function(section){
     observer.observe(section);
   })
-
-  // prevent links default behavior
-  document.querySelectorAll('a').forEach( function(a){
-    a.addEventListener('click', function(event) { event.preventDefault() });
-  });
 
   document.getElementById("nav-button").addEventListener('click', function() {
     document.getElementById('main-nav').classList.toggle('open');
