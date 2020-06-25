@@ -79,3 +79,9 @@ Effort has been taken to ensure that private information is excluded from the re
   ## Code of Conduct
 
   Everyone interacting in the Dash project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ombulabs/dash/CODE_OF_CONDUCT.md).
+
+  ## Sponsorship
+
+![FastRuby.io | Rails Upgrade Services](https://github.com/fastruby/skunk/raw/master/app/assets/images/fastruby-logo.png)
+
+`Dash` is maintained and funded by [FastRuby.io](https://fastruby.io). The names and logos for FastRuby.io are trademarks of The Lean Software Boutique LLC.
