@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+[![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/rubygems/rubygems/blob/master/CODE_OF_CONDUCT.md))
 
 # Dash
 
