@@ -1,14 +1,16 @@
-[![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/rubygems/rubygems/blob/master/CODE_OF_CONDUCT.md))
+[![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/rubygems/rubygems/blob/master/CODE_OF_CONDUCT.md)
 
 # Dash
 
 A dashboard to integrate GitHub pull requests and issues, as well as  Pivotal Tracker stories.
 
 ## Getting Started
+
 To get started with the app:
 ```
 $ bin/setup
 ```
+
 We currently recommend using "Ruby 2.6.6" with Dash to avoid any warnings or problems with gems. 
 
 ## Environment Variables
