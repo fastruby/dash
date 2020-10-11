@@ -18,6 +18,5 @@ Rails.application.routes.draw do
   patch "/todos/update_issues" => "todos#update_issues"
   patch "/todos/update_pivotal" =>"todos#update_pivotal"
 
-  get "/pivotal/new" => "pivotal#new"
-  post "/pivotal/new" => "pivotal#create"
+  resources :pivotal, only: [:edit, :update]
 end
