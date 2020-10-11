@@ -23,7 +23,7 @@ class TodosController < ApplicationController
 
   def update_pivotal
     if current_user.pivotal_token.blank?
-      redirect_to pivotal_new_path
+      redirect_to edit_pivotal_path(current_user)
     else
       PivotalWorker.perform_async(current_user.id)
       redirect_to todos_path, :flash => {
