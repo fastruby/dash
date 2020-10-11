@@ -8,7 +8,7 @@
 </ol>
 
 <div class="token-form">
-  <%= form_with model: @user, url: pivotal_path do |f| %>
+  <%= form_with model: @user, url: pivotal_path, local: true do |f| %>
     <%= f.label :pivotal_token %>
     <%= f.text_field :pivotal_token, value: current_user.pivotal_token %>
     <%= f.submit form_button, class: "button"%>
