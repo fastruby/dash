@@ -1,0 +1,16 @@
+<h4>To make a new token follow these steps: </h4>
+  
+<ol>
+  <li>Open <%=link_to "pivotaltracker.com", "https://www.pivotaltracker.com/", target: :blank%> and sign in. </li>
+  <li>Go to your profile and scroll down to API token.</li>
+  <li>Click on "create new token" and copy the token.</li>
+  <li>Enter token in field below (it will be encrypted when saved).</li>
+</ol>
+
+<div class="token-form">
+  <%= form_with model: @user, url: pivotal_path do |f| %>
+    <%= f.label :pivotal_token %>
+    <%= f.text_field :pivotal_token, value: current_user.pivotal_token %>
+    <%= f.submit form_button, class: "button"%>
+  <% end %>
+</div>

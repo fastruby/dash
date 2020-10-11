@@ -1,4 +1,11 @@
 <div class="container">
+  <div class="menu">
+    <%= link_to "Sync Pull Requests", todos_update_pull_requests_path, method: :patch, class: "button" %>
+    <%= link_to "Sync Issues", todos_update_issues_path, method: :patch, class: "button" %>
+    <%= link_to "Sync Pivotal Stories", todos_update_pivotal_path, method: :patch, class: "button" %>
+    <%= link_to "Edit Pivotal Token", edit_pivotal_path(current_user), class: "button" %>
+  </div>
+
   <% if [@my_pulls, @my_issues, @my_pivotal_stories].any?(&:present?) %>
     <div>
       <h3>Pull Requests (<%= @my_pulls.size %>): </h3>
@@ -83,8 +90,4 @@
     <% else %>
       <p> You don't have any todos at the moment. </p>
     <% end %>
-
-  <%= link_to "Sync Pull Requests", todos_update_pull_requests_path, method: :patch, class: "button" %>
-  <%= link_to "Sync Issues", todos_update_issues_path, method: :patch, class: "button" %>
-  <%= link_to "Sync Pivotal Stories", todos_update_pivotal_path, method: :patch, class: "button" %>
 </div>
