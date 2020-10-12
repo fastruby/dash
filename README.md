@@ -85,7 +85,7 @@ Effort has been taken to ensure that private information is excluded from the re
 
   ## Sponsorship
 
-![FastRuby.io | Rails Upgrade Services](https://github.com/fastruby/dash/raw/master/app/assets/images/fastruby-logo.png)
+![FastRuby.io | Rails Upgrade Services](app/assets/images/fastruby-logo.png)
 
 
 `Dash` is maintained and funded by [FastRuby.io](https://fastruby.io). The names and logos for FastRuby.io are trademarks of The Lean Software Boutique LLC.
