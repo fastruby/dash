@@ -1,6 +1,4 @@
 class PivotalController < ApplicationController
-  before_action :set_user
-
   def update
     if current_user.update(pivotal_token_params)
       redirect_to todos_path, flash: {
@@ -16,9 +14,5 @@ class PivotalController < ApplicationController
 
   def pivotal_token_params
     params.require(:user).permit(:pivotal_token)
-  end
-
-  def set_user
-    @user = current_user
   end
 end
