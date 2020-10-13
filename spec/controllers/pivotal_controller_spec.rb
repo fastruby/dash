@@ -11,12 +11,6 @@ RSpec.describe PivotalController, type: :controller do
 
   describe "#edit" do
     context "when user has pull request or issues" do
-      it "assigns @user with current_user"  do
-        get :edit, params: { id: user.id }
-
-        expect(assigns(:user)).to eq(user)
-      end
-
       it "renders the pivotal partial form" do
         get :edit, params: { id: user.id }
         
