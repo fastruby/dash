@@ -111,3 +111,9 @@ form{
   font-size: 28px;
   font-family: $font-open-sans;
 }
+
+.token-form, .explanation {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 2em;
+}
