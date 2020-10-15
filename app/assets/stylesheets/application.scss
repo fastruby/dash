@@ -32,6 +32,12 @@ header {
   h1, h3, h5, h4{
     text-align: left;
   }
+
+  .menu {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 20px;
+  }
 }
 
 ol{
@@ -104,4 +110,10 @@ form{
   float: left;
   font-size: 28px;
   font-family: $font-open-sans;
+}
+
+.token-form, .explanation {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 2em;
 }

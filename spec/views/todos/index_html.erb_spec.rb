@@ -1,6 +1,16 @@
 require "rails_helper"
 
 RSpec.describe "todos/index" do
+  before do 
+    controller.singleton_class.class_eval do
+      protected
+        def current_user
+          User.new(id: 1)
+        end
+        helper_method :current_user
+    end
+  end
+
   it "displays the pull request's repository name" do
     assign(:my_pulls, [
       FactoryBot.create(:pull_request, repository_name: "test/repo"),

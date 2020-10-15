@@ -1,12 +1,18 @@
 class PivotalController < ApplicationController
-  def new
-    @user = current_user
+  def update
+    if current_user.update(pivotal_token_params)
+      redirect_to todos_path, flash: {
+        notice: "Your pivotal tracker id was updated!"
+      }
+    else
+      flash.now[:error] = current_user.errors.full_messages.first
+      render :edit
+    end
   end
 
-  def create
-    current_user.update(pivotal_token: params[:pivotal_token])
-    redirect_to todos_path, :flash => {
-      :notice => "Your pivotal tracker id was saved!"
-    }
+  private
+
+  def pivotal_token_params
+    params.require(:user).permit(:pivotal_token)
   end
 end

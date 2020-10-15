@@ -4,6 +4,15 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore mac files
+**.DS_Store
+
+# Ignore ruby version files
+.ruby-version
+
+# Ignore nvm file
+.nvmrc
+
 # Ignore bundler config.
 /.bundle
 
