@@ -19,7 +19,17 @@ RSpec.describe TodosController, type: :controller do
 
         expect(assigns(:my_pulls)).to eq pulls
         expect(response).to render_template(:index)
-        expect(response.body).to include("Pull Requests (3):")
+        expect(response.body).to include("(3) Review Requested or Assigned to me:")
+      end
+
+      it "assigns pull requests to @owned_pulls"  do
+        pulls = FactoryBot.create_list(:pull_request, 3)
+        allow(user).to receive(:owned_pulls).and_return(pulls)
+        get :index
+
+        expect(assigns(:owned_pulls)).to eq pulls
+        expect(response).to render_template(:index)
+        expect(response.body).to include("(3) Opened by me:")
       end
 
       it "assigns issues to @my_issues" do
@@ -29,7 +39,7 @@ RSpec.describe TodosController, type: :controller do
 
         expect(assigns(:my_issues)).to eq issues
         expect(response).to render_template(:index)
-        expect(response.body).to include("Issues (3):")
+        expect(response.body).to include("(3) Assigned to me:")
       end
     end
 
