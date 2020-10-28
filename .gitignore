@@ -45,3 +45,5 @@ postcss.config.js
 yarn.lock
 dump.rdb
 coverage
+config/database.yml 
+
