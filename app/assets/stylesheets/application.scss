@@ -117,3 +117,12 @@ form{
   width: 100%;
   padding-bottom: 2em;
 }
+
+.empty-queue {
+  .flash-message {
+    border-radius: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  padding-bottom: 3em;
+}
