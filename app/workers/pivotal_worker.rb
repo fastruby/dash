@@ -21,10 +21,11 @@ sidekiq_options retry: 1
         PivotalStory.find_by(story_number: story.id)&.destroy
       end
     end
+
+    PivotalStory.remove_deleted_stories(stories) if stories.present?
   end
 
 private
-
   def filter
     @filter ||= PIVOTAL_STATES.map { |st| "state:#{st}"}.join(" OR ")
   end
