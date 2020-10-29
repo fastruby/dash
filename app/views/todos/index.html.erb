@@ -6,15 +6,9 @@
     <%= link_to "Edit Pivotal Token", edit_pivotal_path(current_user), class: "button" %>
   </div>
 
-  <% if [@my_pulls, @my_issues, @my_pivotal_stories].any?(&:present?) %>
+  <%= render @my_pulls.present? ? "pull_requests" : "empty_queue", queue_type: :pull_requests %>
 
-    <%= render @my_pulls.present? ? "pull_requests" : "empty_queue", queue_type: :pull_requests %>
+  <%= render @my_issues.present? ? "issues" : "empty_queue", queue_type: :issues %>
 
-    <%= render @my_issues.present? ? "issues" : "empty_queue", queue_type: :issues %>
-
-    <%= render @my_pivotal_stories.present? ? "pivotal_stories" : "empty_queue", queue_type: :pivotal %>
-
-  <% else %>
-    <p> You don't have any todos at the moment. </p>
-  <% end %>
+  <%= render @my_pivotal_stories.present? ? "pivotal_stories" : "empty_queue", queue_type: :pivotal %>
 </div>
