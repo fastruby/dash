@@ -6,9 +6,9 @@
     <%= link_to "Edit Pivotal Token", edit_pivotal_path(current_user), class: "button" %>
   </div>
 
-  <%= render @my_pulls.present? ? "pull_requests" : "empty_queue", queue_type: :pull_requests %>
+  <%= render @my_pulls.present? ? "github_resource" : "empty_queue", resources: @my_pulls, queue_type: :pull_requests %>
 
-  <%= render @my_issues.present? ? "issues" : "empty_queue", queue_type: :issues %>
+  <%= render @my_issues.present? ? "github_resource" : "empty_queue", resources: @my_issues, queue_type: :issues %>
 
   <%= render @my_pivotal_stories.present? ? "pivotal_stories" : "empty_queue", queue_type: :pivotal %>
 </div>
