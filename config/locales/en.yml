@@ -31,6 +31,6 @@
 
 en:
   queue_types:
-    pull_requests: Pull Requests
-    issues: Issues
+    pull_request: Pull Requests
+    issue: Issues
     pivotal: Pivotal Tracker Stories

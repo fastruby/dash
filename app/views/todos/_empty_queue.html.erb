@@ -1,9 +1,9 @@
 <div class="empty-queue">
-  <h3><%= raw t("queue_types.#{queue_type}: ") %></h3>
+  <h3><%= raw t("queue_types.#{queue_type.to_s.singularize}") %>:</h3>
 
   <div class="flash-message flash-info">
     <p>
-      <i class="fa fa-check-circle"></i>Yay! You don't have any open <%= raw t("queue_types.#{queue_type}").humanize.downcase %>!
+      <i class="fa fa-check-circle"></i>Yay! You don't have any open <%= raw t("queue_types.#{queue_type.to_s.singularize}").humanize.downcase %>!
       <%= link_to "Would you like to sync?", send("todos_update_#{queue_type}_path"), method: :patch if queue_type.present? %>
     </p>
   </div>
