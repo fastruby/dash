@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  queue_types:
+    pull_request: Pull Requests
+    issue: Issues
+    pivotal: Pivotal Tracker Stories

@@ -41,7 +41,7 @@ RSpec.describe TodosController, type: :controller do
 
         expect(assigns(:my_pulls).size).to eq 0
         expect(response).to render_template(:index)
-        expect(response.body).to include("You don't have any todos at the moment.")
+        expect(response.body).to include("Yay! You don't have any open pull requests")
       end
     end
   end
