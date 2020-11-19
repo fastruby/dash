@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  
   has_many :pull_requests_assignees
   has_many :pull_requests, through: :pull_requests_assignees
 
@@ -10,6 +11,8 @@ class User < ApplicationRecord
 
   has_many :pivotal_stories_owners
   has_many :pivotal_stories, through: :pivotal_stories_owners
+  
+  has_many :owned_pull_requests, foreign_key:"author_id", class_name: "PullRequest"
 
   encrypts :pivotal_token
 
@@ -29,17 +32,5 @@ class User < ApplicationRecord
 
   def my_pulls
     pull_requests + prs
-  end
-
-  def my_issues
-    issues
-  end
-
-  def my_pivotal_stories
-    pivotal_stories
-  end
-
-  def owned_pulls
-    PullRequest.select{ |pr| pr.author.downcase == self.name.downcase}
   end
 end

@@ -73,7 +73,9 @@ ActiveRecord::Schema.define(version: 2020_10_12_013526) do
     t.string "repository_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "author"
+    t.string "author_name"
+    t.integer "author_id"
+    t.index ["author_id"], name: "index_pull_requests_on_author_id"
   end
 
   create_table "pull_requests_assignees", force: :cascade do |t|

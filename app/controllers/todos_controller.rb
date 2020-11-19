@@ -3,9 +3,9 @@ class TodosController < ApplicationController
 
   def index
     @my_pulls = current_user.my_pulls
-    @my_issues = current_user.my_issues
+    @my_issues = current_user.issues
     @my_pivotal_stories = current_user.pivotal_stories
-    @owned_pulls = current_user.owned_pulls
+    @owned_pulls = current_user.owned_pull_requests
   end
 
   def update_pull_requests
