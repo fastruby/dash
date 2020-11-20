@@ -12,7 +12,8 @@ class PullRequest < ApplicationRecord
         pull_request_number: pr.number,
         repository_link: pull.repo_url(pr),
         state: pr.state,
-        repository_name: self.repo_name(pr)
+        repository_name: self.repo_name(pr),
+        author: pr.user.login
       )
 
     pull.pr_assignees(pr.assignees)

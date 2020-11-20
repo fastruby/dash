@@ -5,6 +5,7 @@ class TodosController < ApplicationController
     @my_pulls = current_user.my_pulls
     @my_issues = current_user.my_issues
     @my_pivotal_stories = current_user.pivotal_stories
+    @owned_pulls = current_user.owned_pulls
   end
 
   def update_pull_requests

@@ -38,4 +38,8 @@ class User < ApplicationRecord
   def my_pivotal_stories
     pivotal_stories
   end
+
+  def owned_pulls
+    PullRequest.select{ |pr| pr.author.downcase == self.name.downcase}
+  end
 end
