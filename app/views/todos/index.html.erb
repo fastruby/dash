@@ -9,8 +9,6 @@
   <%= render "github_resource", resources: @my_pulls, queue_type: :pull_requests %>
 
   <%= render "github_resource", resources: @my_issues, queue_type: :issues %>
-  
-  <%= render "github_resource", resources: @owned_pulls, queue_type: :issues %>
 
   <%= render "pivotal_stories", resources: @my_pivotal_stories, queue_type: :pivotal %>
 </div>

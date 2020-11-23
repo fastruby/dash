@@ -31,6 +31,6 @@ class User < ApplicationRecord
   end
 
   def my_pulls
-    pull_requests + prs
+    pull_requests + prs + owned_pull_requests
   end
 end

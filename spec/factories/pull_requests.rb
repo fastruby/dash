@@ -6,6 +6,7 @@ FactoryBot.define do
     repository_link { "http://repo_pr" }
     state { "open" }
     repository_name { "test/test"}
-    author {"User1"}
+    author_id { 3 }
+    author_name {"User4"}
   end
 end
