@@ -74,9 +74,9 @@ form{
   .table__row{
     padding: 10px;
     display: grid;
-    grid-template-columns: 120px 1fr 96px 96px 140px;
-    &.issue {
-     grid-template-columns: 120px 1fr 96px 140px;
+    grid-template-columns: 120px 1fr 96px 140px;
+    &.pull_request {
+      grid-template-columns: 120px 1fr 96px 96px 140px;
     }
     align-items: center;
     border-bottom: 1px solid $medium_grey;
