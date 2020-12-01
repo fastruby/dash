@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "todos/index" do
-  before do 
+  before do
     controller.singleton_class.class_eval do
       protected
         def current_user
@@ -18,6 +18,7 @@ RSpec.describe "todos/index" do
     ])
     assign(:my_issues, [])
     assign(:my_pivotal_stories, [])
+    assign(:owned_pulls, [])
 
     render
 
@@ -32,6 +33,7 @@ RSpec.describe "todos/index" do
     ])
     assign(:my_pulls, [])
     assign(:my_pivotal_stories, [])
+    assign(:owned_pulls, [])
 
     render
 
@@ -46,6 +48,7 @@ RSpec.describe "todos/index" do
     ])
     assign(:my_issues, [])
     assign(:my_pulls, [])
+    assign(:owned_pulls, [])
 
     render
 

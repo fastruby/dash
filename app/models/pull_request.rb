@@ -4,6 +4,8 @@ class PullRequest < ApplicationRecord
 
   has_many :pull_requests_reviewers
   has_many :reviewers, through: :pull_requests_reviewers, class_name: "User", source: :user
+  
+  belongs_to :owner, foreign_key: "author_id", class_name: "User", optional: true
 
   def self.create_or_update_pull_request(pr)
     pull = PullRequest.find_or_create_by(pull_request_link: pr.html_url)
@@ -12,9 +14,10 @@ class PullRequest < ApplicationRecord
         pull_request_number: pr.number,
         repository_link: pull.repo_url(pr),
         state: pr.state,
-        repository_name: self.repo_name(pr)
+        repository_name: self.repo_name(pr),
+        author_name: pr.user.login,
+        author_id: author_id(pr)
       )
-
     pull.pr_assignees(pr.assignees)
     pull.pr_reviewers(pr.requested_reviewers)
   end
@@ -72,6 +75,11 @@ class PullRequest < ApplicationRecord
 
   def self.remove_closed_pull_request(_pull_request)
     PullRequest.find(_pull_request.id).delete
+  end
+  
+  def self.author_id(pr) 
+    u = User.find_by(uid: pr.user.id)
+    u ? u.id : 0
   end
 
   def updates_pr(updated_pr)

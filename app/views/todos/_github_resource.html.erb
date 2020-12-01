@@ -6,21 +6,27 @@
     <h3><%= raw t("queue_types.#{queue_type}").humanize.titleize.pluralize %> (<%= resources.size %>): </h3>
     <table class="table">
       <thead>
-        <tr class="table__row table__row--head">
+        <tr class="table__row table__row--head <%= queue_type %>">
           <th>Number</th>
           <th>Title</th>
+          <% if queue_type == "pull_request" %>
+            <th>Author</th>
+          <% end %>
           <th>State</th>
           <th>Created</th>
         </tr>
       </thead>
       <tbody>
       <% resources.each do | resource | %>
-        <tr class="table__row">
+        <tr class="table__row <%= queue_type %>">
           <td><%= resource.send("#{queue_type}_number") %></td>
           <td>
             <%= link_to resource.repository_name, resource.repository_link, target: :_blank, class: "project_name"%><br/>
             <%= link_to resource.title, resource.send("#{queue_type}_link"), target: :_blank %>
           </td>
+          <% if queue_type == "pull_request" %>
+            <td><%=resource.author_name%></td>
+          <% end %>
           <td><%= resource.state %></td>
           <td><%= created_at(resource) %></td>
         </tr>
