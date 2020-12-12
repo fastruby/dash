@@ -2,12 +2,8 @@ require "rails_helper"
 
 RSpec.describe "todos/index" do
   before do
-    controller.singleton_class.class_eval do
-      protected
-        def current_user
-          User.new(id: 1)
-        end
-        helper_method :current_user
+    def view.current_user
+      User.new(id: 1)
     end
   end
 
@@ -19,7 +15,6 @@ RSpec.describe "todos/index" do
     assign(:my_issues, [])
     assign(:my_pivotal_stories, [])
     assign(:owned_pulls, [])
-
     render
 
     expect(rendered).to include "test/repo"
