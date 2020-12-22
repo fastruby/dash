@@ -9,9 +9,9 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 if next?
-  gem 'rails', '~> 6.1.0'
+  gem 'rails', git: 'https://github.com/rails/rails.git', branch: 'master'
 else
-  gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+  gem 'rails', '~> 6.1.0'
 end
 
 # Use postgresql as the database for Active Record
