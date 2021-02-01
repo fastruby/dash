@@ -112,7 +112,7 @@ jobs:
             gem update bundler
             bundle update --bundler
             export BUNDLE_GEMFILE=Gemfile.next
-            bundle update --jobs=4 --retry=3 --path vendor/bundle
+            bundle update --jobs=4 --retry=3
             bundle exec rake assets:precompile
 
       - save_cache:
