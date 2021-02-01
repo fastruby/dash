@@ -33,7 +33,7 @@ gem 'omniauth-github', '~> 1.4.0'
 
 gem 'dotenv-rails'
 
-gem 'octokit', '~> 4.18.0'
+gem 'octokit', '~> 4.20.0'
 
 gem 'sidekiq'
 
