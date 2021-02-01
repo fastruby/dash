@@ -23,8 +23,11 @@ class Issue < ApplicationRecord
     issues.each do |issue|
       begin
         updated_issue = octokit_service.get_issue(issue)
-
-        issue.updates_issue(updated_issue)
+        if updated_issue[:message] == "Not Found"
+          self.remove_closed_issue(issue)
+        else
+          issue.updates_issue(updated_issue)
+        end
       rescue Octokit::NotFound
         self.remove_closed_issue(issue)
       end
