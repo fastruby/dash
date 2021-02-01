@@ -9,7 +9,7 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 if next?
-  gem 'rails', git: 'https://github.com/rails/rails.git', branch: 'master'
+  gem 'rails', git: 'https://github.com/rails/rails.git', branch: 'main'
 else
   gem 'rails', '~> 6.1.0'
 end
