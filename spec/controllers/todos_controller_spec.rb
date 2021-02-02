@@ -44,6 +44,17 @@ RSpec.describe TodosController, type: :controller do
         expect(response.body).to include("Yay! You don't have any open pull requests")
       end
     end
+
+    context "when the user is both the owner and assignee" do
+      let!(:owned_pr) { FactoryBot.create(:pull_request, owner: user) }
+      let!(:assined_pr) { PullRequestsAssignee.create(user_id: user.id, pull_request_id: owned_pr.id) }
+
+      it "doesnt show duplicated PRs" do
+        get :index
+
+        expect(assigns(:my_pulls).count).to eq 1
+      end
+    end
   end
 
   describe "update_pull_requests and issues" do
