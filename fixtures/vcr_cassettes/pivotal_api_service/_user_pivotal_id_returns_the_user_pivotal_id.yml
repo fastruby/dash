@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.6.6 (x86_64-darwin19; ruby) TrackerApi/1.11.0 Faraday/1.0.1
+      Accept:
+      - application/json
+      X-Trackertoken:
+      - "$ACCESS_TOKEN"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bd781e97-e706-4dc2-af3a-a10f32dce672
+      Etag:
+      - W/"54b9e50e3dbe528303906f3d10da47fe"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.086647'
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      Date:
+      - Tue, 02 Feb 2021 21:49:10 GMT
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '20'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: '{"kind":"me","id":3333029,"name":"ombubot","initials":"OM","username":"ombubot","time_zone":{"kind":"time_zone","olson_name":"America/Los_Angeles","offset":"-08:00"},"api_token":"$ACCESS_TOKEN","has_google_identity":false,"accounts":[{"kind":"account_summary","id":1132270,"name":"Untitled","status":"active","plan":"Free"}],"projects":[{"kind":"membership_summary","id":10679406,"project_id":2445808,"project_name":"The
+        Test","project_color":"e46642","favorite":false,"role":"owner","last_viewed_at":"2020-06-02T18:57:25Z"}],"email":"ombubot@ombulabs.com","receives_in_app_notifications":true,"created_at":"2020-04-24T18:12:56Z","updated_at":"2021-02-02T21:44:07Z"}'
+  recorded_at: Tue, 02 Feb 2021 21:49:10 GMT
+recorded_with: VCR 6.0.0

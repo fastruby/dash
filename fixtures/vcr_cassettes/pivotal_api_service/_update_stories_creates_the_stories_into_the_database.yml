@@ -1,0 +1,267 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.6.6 (x86_64-darwin19; ruby) TrackerApi/1.11.0 Faraday/1.0.1
+      Accept:
+      - application/json
+      X-Trackertoken:
+      - "$ACCESS_TOKEN"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2030eec4-02b6-4384-b892-faa6ca7778eb
+      Etag:
+      - W/"b030a8cd7c8c0acb99701eedc8748ffe"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.052712'
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      Date:
+      - Tue, 02 Feb 2021 21:49:10 GMT
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '20'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":2445808,"kind":"project","name":"The Test","version":7,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/Los_Angeles","offset":"-08:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":4,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2021-02-01T08:00:00Z","created_at":"2020-04-24T19:07:25Z","updated_at":"2020-04-24T20:02:13Z","account_id":1132270,"current_iteration_number":1,"enable_following":true}]'
+  recorded_at: Tue, 02 Feb 2021 21:49:10 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/2445808/stories?filter=state:unstarted
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.6.6 (x86_64-darwin19; ruby) TrackerApi/1.11.0 Faraday/1.0.1
+      Accept:
+      - application/json
+      X-Trackertoken:
+      - "$ACCESS_TOKEN"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Tracker-Pagination-Total:
+      - '2'
+      X-Tracker-Project-Version:
+      - '7'
+      X-Tracker-Pagination-Limit:
+      - '100'
+      X-Request-Id:
+      - 4d17d484-a5cd-4a66-a3cd-afdd6f5bc808
+      X-Tracker-Pagination-Offset:
+      - '0'
+      Etag:
+      - W/"199ce592fff830d14424c421b89d0207"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.103700'
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      X-Tracker-Pagination-Returned:
+      - '2'
+      Date:
+      - Tue, 02 Feb 2021 21:49:11 GMT
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '20'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"kind":"story","id":172507238,"created_at":"2020-04-24T19:08:21Z","updated_at":"2020-06-02T18:57:33Z","story_type":"feature","name":"As
+        a user I would like all stories to be tested. ","current_state":"unstarted","requested_by_id":3333029,"url":"https://www.pivotaltracker.com/story/show/172507238","project_id":2445808,"owner_ids":[3333029],"labels":[],"owned_by_id":3333029},{"kind":"story","id":172507235,"created_at":"2020-04-24T19:08:03Z","updated_at":"2020-06-02T18:57:42Z","story_type":"feature","name":"As
+        a user I would like to be able to see a test. ","current_state":"unstarted","requested_by_id":3333029,"url":"https://www.pivotaltracker.com/story/show/172507235","project_id":2445808,"owner_ids":[3333029],"labels":[],"owned_by_id":3333029}]'
+  recorded_at: Tue, 02 Feb 2021 21:49:10 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/2445808
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.6.6 (x86_64-darwin19; ruby) TrackerApi/1.11.0 Faraday/1.0.1
+      Accept:
+      - application/json
+      X-Trackertoken:
+      - "$ACCESS_TOKEN"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Tracker-Project-Version:
+      - '7'
+      X-Request-Id:
+      - 5fed1adb-c4e4-4774-b5ca-1854452f842e
+      Etag:
+      - W/"ad190ddd69da698f3e5b1507f8b9ed4e"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.043864'
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      Date:
+      - Tue, 02 Feb 2021 21:49:11 GMT
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '20'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":2445808,"kind":"project","name":"The Test","version":7,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/Los_Angeles","offset":"-08:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":4,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2021-02-01T08:00:00Z","created_at":"2020-04-24T19:07:25Z","updated_at":"2020-04-24T20:02:13Z","account_id":1132270,"current_iteration_number":1,"enable_following":true}'
+  recorded_at: Tue, 02 Feb 2021 21:49:11 GMT
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/2445808
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.6.6 (x86_64-darwin19; ruby) TrackerApi/1.11.0 Faraday/1.0.1
+      Accept:
+      - application/json
+      X-Trackertoken:
+      - "$ACCESS_TOKEN"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Tracker-Project-Version:
+      - '7'
+      X-Request-Id:
+      - 996ff240-3be2-47f4-ad63-c2c5c94042fc
+      Etag:
+      - W/"ad190ddd69da698f3e5b1507f8b9ed4e"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.067613'
+      X-Content-Type-Options:
+      - nosniff, nosniff
+      Date:
+      - Tue, 02 Feb 2021 21:49:11 GMT
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      X-Tracker-Client-Pinger-Interval:
+      - '20'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":2445808,"kind":"project","name":"The Test","version":7,"iteration_length":1,"week_start_day":"Monday","point_scale":"0,1,2,3","point_scale_is_custom":false,"bugs_and_chores_are_estimatable":false,"automatic_planning":true,"enable_tasks":true,"time_zone":{"kind":"time_zone","olson_name":"America/Los_Angeles","offset":"-08:00"},"velocity_averaged_over":3,"number_of_done_iterations_to_show":4,"has_google_domain":false,"enable_incoming_emails":true,"initial_velocity":10,"public":false,"atom_enabled":false,"project_type":"private","start_time":"2021-02-01T08:00:00Z","created_at":"2020-04-24T19:07:25Z","updated_at":"2020-04-24T20:02:13Z","account_id":1132270,"current_iteration_number":1,"enable_following":true}'
+  recorded_at: Tue, 02 Feb 2021 21:49:11 GMT
+recorded_with: VCR 6.0.0
