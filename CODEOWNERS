@@ -2,3 +2,4 @@
 # Unless a posterior rule has precedence, they will be automatically requested
 # for review when a pull request is opened.
 *       @fastruby/black-bunny-brigade
+
