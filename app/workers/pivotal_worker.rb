@@ -8,7 +8,7 @@ class PivotalWorker
     pivotal_service = PivotalApiService.new(user.pivotal_token)
 
     @first_run = user.pivotal_id.nil?
-    user.update(pivotal_id: pivotal_service.user_pivotal_id) if @first_run
+    user.update(pivotal_id: pivotal_service.user_pivotal_id) unless user.pivotal_id
 
     pivotal_service.update_stories
   end
