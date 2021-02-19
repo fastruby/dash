@@ -16,7 +16,7 @@ class PivotalStory < ApplicationRecord
     )
   end
 
-  def self.remove_accepted_stories(_stories)
+  def self.delete_stories_not_in_list(_stories)
     story_request_links = _stories.map {|story| story[:url] }
     PivotalStory.where.not(story_link: story_request_links).delete_all
   end
