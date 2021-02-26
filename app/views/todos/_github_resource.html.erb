@@ -25,7 +25,7 @@
             <%= link_to resource.title, resource.send("#{queue_type}_link"), target: :_blank %>
           </td>
           <% if queue_type == "pull_request" %>
-            <td><%=resource.author_name%></td>
+            <td><%= truncate(resource.author_name, length: 17) %></td>
           <% end %>
           <td><%= resource.state %></td>
           <td><%= created_at(resource) %></td>
