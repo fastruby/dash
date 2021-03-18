@@ -11,7 +11,7 @@ To get started with the app:
 $ bin/setup
 ```
 
-We currently recommend using "Ruby 2.6.6" with Dash to avoid any warnings or problems with gems. 
+We currently recommend using "Ruby 2.6.6" with Dash to avoid any warnings or problems with gems.
 
 ## Environment Variables
 
@@ -81,7 +81,7 @@ Effort has been taken to ensure that private information is excluded from the re
 
   ## Code of Conduct
 
-  Everyone interacting in the Dash project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ombulabs/dash/CODE_OF_CONDUCT.md).
+  Everyone interacting in the Dash project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](CODE_OF_CONDUCT.md).
 
   ## Sponsorship
 
