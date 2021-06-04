@@ -46,6 +46,7 @@ RSpec.describe TodosController, type: :controller do
     end
 
     context "when the user is both the owner and assignee" do
+      let(:name) { "User3" }
       let!(:owned_pr) { FactoryBot.create(:pull_request, owner: user) }
       let!(:assined_pr) { PullRequestsAssignee.create(user_id: user.id, pull_request_id: owned_pr.id) }
 
