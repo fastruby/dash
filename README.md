@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/rubygems/rubygems/blob/master/CODE_OF_CONDUCT.md)
+[![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/fastruby/dash/blob/main/CODE_OF_CONDUCT.md)
 
 # Dash
 
@@ -92,7 +92,7 @@ Effort has been taken to ensure that private information is excluded from the re
 
   ## Code of Conduct
 
-  Everyone interacting in the Dash project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](CODE_OF_CONDUCT.md).
+  Everyone interacting in the Dash project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/fastruby/dash/blob/main/CODE_OF_CONDUCT.md).
 
   ## Sponsorship
 
