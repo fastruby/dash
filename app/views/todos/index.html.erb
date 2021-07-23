@@ -3,7 +3,6 @@
     <%= link_to "Sync Pull Requests", todos_update_pull_requests_path, method: :patch, class: "button" %>
     <%= link_to "Sync Issues", todos_update_issues_path, method: :patch, class: "button" %>
     <%= link_to "Sync Pivotal Stories", todos_update_pivotal_path, method: :patch, class: "button" %>
-    <%= link_to "Edit Pivotal Token", edit_pivotal_path(current_user), class: "button" %>
   </div>
 
   <%= render "github_resource", resources: @my_pulls, queue_type: :pull_requests %>
