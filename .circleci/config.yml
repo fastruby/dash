@@ -32,23 +32,23 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-current-{{ checksum "Gemfile.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-current-
+            - v1-dependencies-
 
       - run:
           name: install dependencies
           command: |
-            npm install
             gem update bundler
-            bundle update --bundler
             bundle install --jobs=4 --retry=3 --path vendor/bundle
             bundle exec rake assets:precompile
 
       - save_cache:
           paths:
             - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - ./node_modules
+          key: v1-dependencies-current-{{ checksum "Gemfile.lock" }}
 
       # Database setup
       - run: bundle exec rake db:create
@@ -101,24 +101,24 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.next.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-next-{{ checksum "Gemfile.next.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-next-
+            - v1-dependencies-
 
       - run:
           name: install dependencies
           command: |
-            npm install
             gem update bundler
-            bundle update --bundler
             export BUNDLE_GEMFILE=Gemfile.next
-            bundle update --jobs=4 --retry=3
+            bundle update rails --jobs=4 --retry=3
             bundle exec rake assets:precompile
 
       - save_cache:
           paths:
             - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.next.lock" }}
+            - ./node_modules
+          key: v1-dependencies-next-{{ checksum "Gemfile.next.lock" }}
 
       # Database setup
       - run: bundle exec rake db:create
