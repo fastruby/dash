@@ -40,7 +40,6 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            npm install
             gem update bundler
             bundle install --jobs=4 --retry=3 --path vendor/bundle
             bundle exec rake assets:precompile
@@ -110,7 +109,6 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            npm install
             gem update bundler
             export BUNDLE_GEMFILE=Gemfile.next
             bundle update rails --jobs=4 --retry=3
