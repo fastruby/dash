@@ -48,6 +48,7 @@ jobs:
       - save_cache:
           paths:
             - ./vendor/bundle
+            - ./node_modules
           key: v1-dependencies-current-{{ checksum "Gemfile.lock" }}
 
       # Database setup
@@ -112,12 +113,13 @@ jobs:
             npm install
             gem update bundler
             export BUNDLE_GEMFILE=Gemfile.next
-            bundle update --jobs=4 --retry=3
+            bundle update rails --jobs=4 --retry=3
             bundle exec rake assets:precompile
 
       - save_cache:
           paths:
             - ./vendor/bundle
+            - ./node_modules
           key: v1-dependencies-next-{{ checksum "Gemfile.next.lock" }}
 
       # Database setup
