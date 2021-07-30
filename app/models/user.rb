@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :pivotal_stories, through: :pivotal_stories_owners
   has_many :owned_pull_requests, foreign_key: "author_id", class_name: "PullRequest"
 
-  encrypts :pivotal_token
+  lockbox_encrypts :pivotal_token
 
   validates :pivotal_token, length: { is: 32 },
                             allow_blank: true,
