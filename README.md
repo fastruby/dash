@@ -73,7 +73,7 @@ Effort has been taken to ensure that private information is excluded from the re
 ```
   ## Contributing
 
-  Bug reports and pull requests are welcome on GitHub at [https://github.com/ombulabs/dash](https://github.com/ombulabs/dash). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+  Bug reports and pull requests are welcome on GitHub at [https://github.com/fastruby/dash](https://github.com/fastruby/dash). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
   When Submitting a Pull Request:
