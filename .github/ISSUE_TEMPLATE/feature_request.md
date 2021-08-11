@@ -27,7 +27,7 @@ Please include a detailed description of the feature you are requesting and any 
 > **I do \<something\>**
 > **And then I do \<another action\>**
 > **And I see \<some result\>**
- 
+
 **Problem:**
 
 Please include a detailed description of the problem this feature would solve.
@@ -35,13 +35,13 @@ Please include a detailed description of the problem this feature would solve.
 > **As a \<role name\>**
 > **I want to \<do something\>**
 > **So that I can achieve a \<goal\>**
- 
+
 **Mockups:**
 
 Include any mockup idea related to the requested feature if it applies.
- 
+
 **Resources:**
 
 If you have resources related to the implementation or research for this feature, add them here.
- 
-**I will abide by the [code of conduct](https://github.com/rubygems/rubygems/blob/master/CODE_OF_CONDUCT.md)**
+
+**I will abide by the [code of conduct](../blob/main/CODE_OF_CONDUCT.md)**

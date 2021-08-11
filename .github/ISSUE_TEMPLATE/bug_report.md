@@ -42,10 +42,10 @@ Provide any relevant information about your setup (Customize the list accordingl
 1. Version of the software the issue is being opened for.
 2. Operating System
 3. Operating System version
-4. Browser 
-5. Browser version 
-6. Device 
-7. Firmware version 
+4. Browser
+5. Browser version
+6. Device
+7. Firmware version
 8. SDK version
 9. Toolchain version
 
@@ -59,6 +59,6 @@ If the issue has an effect in the frontend, include any relevant screenshots and
 
 **Logs**
 
-Include relevant log snippets or files here. 
+Include relevant log snippets or files here.
 
-**I will abide by the [code of conduct] (https://github.com/rubygems/rubygems/blob/master/CODE_OF_CONDUCT.md)**
+**I will abide by the [code of conduct](../blob/main/CODE_OF_CONDUCT.md)**
