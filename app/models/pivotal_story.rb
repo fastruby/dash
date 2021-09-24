@@ -31,4 +31,12 @@ private
   def self.project_url(project_id)
     "https://www.pivotaltracker.com/n/projects/#{project_id}"
   end
+
+  def self.sync_with_pivotal_tracker
+    users = User.all
+    users.each do |user|
+      next unless user.pivotal_token.present?
+      PivotalWorker.perform_async(user.id)
+    end
+  end
 end
