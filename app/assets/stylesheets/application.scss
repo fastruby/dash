@@ -129,3 +129,18 @@ form{
   }
   padding-bottom: 3em;
 }
+
+.checkbox-option {
+  font-size: 14px;
+  width: 400px;
+  display: flex;
+
+  .item {
+    display: inline-block;
+
+    input {
+      width: 30px !important;
+      margin-top: 6px;
+    }
+  }
+}
