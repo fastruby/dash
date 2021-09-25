@@ -2,6 +2,8 @@ class Issue < ApplicationRecord
   has_many :issues_assignees
   has_many :assignees, through: :issues_assignees, class_name: "User", source: :user
 
+  belongs_to :owner, foreign_key: "author_id", class_name: "User", optional: true
+
   def self.create_or_update_issue(issue)
     if issue["pull_request"].nil?
       _issue = Issue.find_or_create_by(issue_link: issue.html_url)
@@ -10,6 +12,8 @@ class Issue < ApplicationRecord
                     issue_link: issue.html_url,
                     repository_link: _issue.repo_url(issue),
                     state: issue.state,
+                    author_name: pr.user.login,
+                    author_id: author_id(pr),
                     repository_name: _issue.repo_name(issue))
 
       _issue.issue_assignees(issue.assignees)
