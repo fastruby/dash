@@ -11,7 +11,7 @@ To get started with the app:
 $ bin/setup
 ```
 
-We currently recommend using "Ruby 2.6.6" with Dash to avoid any warnings or problems with gems.
+We currently recommend using "Ruby 2.7.3" with Dash to avoid any warnings or problems with gems.
 
 ## Environment Variables
 
