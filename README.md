@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/ombulabs/dash/tree/master.svg?style=svg&circle-token=aa41e55b03a167988f14667d78d1d7c0183f2656)](https://circleci.com/gh/ombulabs/dash/tree/master)  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](../blob/main/CODE_OF_CONDUCT.md)
 
+# Notice: This project as been deprecated
+
 # Dash
 
 A dashboard to integrate GitHub pull requests and issues, as well as  Pivotal Tracker stories.
